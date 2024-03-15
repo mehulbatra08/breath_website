@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Counter</h1>
+    <h2 id="counter">0</h2>
+
+    <script>
+        var counterElement = document.getElementById('counter');
+
+        function updateCounter() {
+            var count = parseInt(counterElement.innerText);
+            if (count < 200) {
+                count += 1;
+                counterElement.innerText = count;
+                setTimeout(updateCounter, 5);
+            }
+        }
+
+        updateCounter();
+    </script>
+</body>
+</html>
